@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+.content{
+    height: 100dvh;
+    background-color:blueviolet;
+    display: grid;
+    grid-template-rows: 50px auto 100px;
+}
+
+.header{
+    background-color: aquamarine;
+    padding: 1rem;
+    display: flex;
+
+    .logo{
+        margin-right: auto;
+    }
+
+    .systemOfMeasurement{
+        margin-left: auto;
+    }
+}
+
+.main{
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mainCard{
+        background-color: aquamarine;
+        padding: 1rem;
+
+        display: grid;
+        grid-template-rows: 25% auto;
+
+        min-width: 80%;
+        width: fit-content;
+        min-height: 70%;
+        height: fit-content;
+
+        .mainCard1stRow{
+            background-color: antiquewhite;
+            padding: 1rem;
+            min-width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .mainCard2ndRow{
+            background-color:cornflowerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            min-width: 60%;
+            min-height: 60%;
+
+        }
+    }
+
+}
+
+.footer{
+    background-color:lightcoral;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.footer img {
+    width: 100px;
+  }
