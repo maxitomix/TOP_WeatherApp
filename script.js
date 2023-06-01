@@ -1,8 +1,9 @@
 
 let locationInput = 'London';
+let weather
 
 
-function userSearch (){
+function captureInput(){
     let inputField = document.getElementById('searchInput');
     locationInput = inputField.value;
     console.log('User searched:', locationInput);
@@ -10,11 +11,12 @@ function userSearch (){
     return inputField;
 }
 
-function createControls(){
+function searchButton(){
     let searchButton = document.getElementById('searchButton');
 
     searchButton.addEventListener('click', () => {
-        userSearch();
+        captureInput();
+        getWeather();
     })
 }
 
@@ -27,7 +29,7 @@ function writeQuery(){
 async function getWeather() {
   const response = await fetch(writeQuery(), {mode: 'cors'});
   const weatherData = await response.json();
-  return weatherData
+  weather = weatherData;
 }
 
 
@@ -35,5 +37,5 @@ async function getWeather() {
 
 
 //----
-
-createControls()
+getWeather()
+searchButton()
