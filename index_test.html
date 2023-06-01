@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
@@ -12,14 +12,22 @@
     <div class="content">
         <div class="header">
             <div class="logo">
-                <img src="" alt="logo">
+                <img src="partly_cloudy_day.png" alt="logo">
             </div>
             <div class="search">
                 <label for="search"> Where are you?</label>
                 <input id="searchInput" type="search" name="search" id="search" placeholder="London">
                 <button id="searchButton" type="button" name="search" >Find</button>
             </div>
-            <div class="systemOfMeasurement"> C o F</div>
+            <div class="systemOfMeasurement"> 
+                <form class="systemOfMeasurementForm">
+                    <div class="switch-field">
+                        <input type="radio" id="toggleMetric" name="system" value="metric" checked onclick="handleCheckboxClick(this)"/>
+                        <label for="toggleMetric">Metric</label>
+                        <input type="radio" id="toggleImperial" name="system" value="imperial" onclick="handleCheckboxClick(this)"/>
+                        <label for="toggleImperial">Imperial</label>
+                    </div>
+            </div>
         </div>
         <div class="main">
             <div class="mainCard">
