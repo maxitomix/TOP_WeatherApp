@@ -4,6 +4,7 @@
 
 .content{
     height: 100dvh;
+    width: 100hw;
     background-color:blueviolet;
     display: grid;
     grid-template-rows: 100px auto 100px;
@@ -101,16 +102,19 @@
 
 
 .footer{
-    background-color:lightcoral;
-    padding: 1rem;
+    background-color:aquamarine;
+    padding-top: 1rem;
+    padding-bottom: 0;
     display: flex;
     justify-content: center;
-
+    align-items: center;
 }
 
 
 .footer img {
+
     width: 100px;
+    /* height: fit-content; */
 }
 
 /*============ toggle switch for imperial-metric======== */
